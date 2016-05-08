@@ -1,9 +1,9 @@
 #About
 Just for ...
 
-#Frontend:
+#Frontend
 Bootstrap
 AngularJS
 
-#Backend:
+#Backend
 Django

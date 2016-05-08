@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<h1 class="page-header">资源监控</h1>
+<h3 class="sub-header">集群情况</h3>
+<div class="row placeholders">
+    <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=5&from=1462629012803&to=1462632612803&var-node=All"
+            width="450" height="200" frameborder="0"></iframe>
+    <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=7&from=1462629726228&to=1462633326228&var-node=All"
+            width="450" height="200" frameborder="0"></iframe>
+</div>
+
+<h3 class="sub-header">节点1：localhost</h3>
+<div class="row placeholders">
+    <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=6&from=1462687588747&to=1462691188747&var-node=All"
+            width="450" height="200" frameborder="0"></iframe>
+    <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=9&from=1462687604134&to=1462691204134&var-node=All"
+            width="450" height="200" frameborder="0"></iframe>
+    <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=1&from=1462687575627&to=1462691175627&var-node=All"
+            width="450" height="200" frameborder="0"></iframe>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

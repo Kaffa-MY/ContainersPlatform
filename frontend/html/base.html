@@ -53,11 +53,11 @@
 </nav>
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" data-ng-app="ctrlPlane" data-ng-controller="planeCtrl">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Reports</a></li>
+                <li><a data-ng-click='showModule(1)'>镜像中心</a></li>
                 <li><a href="#">Analytics</a></li>
                 <li><a href="#">Export</a></li>
             </ul>
@@ -69,31 +69,18 @@
                 <li><a href="">More navigation</a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="">PaaS平台资源监控</a></li>
+                <li><a data-ng-click="showModule(2)">PaaS平台资源监控</a></li>
                 <li><a href="">其他一</a></li>
                 <li><a href="">其他二</a></li>
             </ul>
         </div>
 
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">资源监控</h1>
-            <h3 class="sub-header">集群情况</h3>
-            <div class="row placeholders">
-                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=5&from=1462629012803&to=1462632612803&var-node=All"
-                        width="450" height="200" frameborder="0"></iframe>
-                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=7&from=1462629726228&to=1462633326228&var-node=All"
-                        width="450" height="200" frameborder="0"></iframe>
-            </div>
+        <div data-ng-show="registryUI" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <iframe src="http://192.168.166.150:8181/repositories" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
+        </div>
 
-            <h3 class="sub-header">节点1：localhost</h3>
-            <div class="row placeholders">
-                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=6&from=1462687588747&to=1462691188747&var-node=All"
-                        width="450" height="200" frameborder="0"></iframe>
-                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=9&from=1462687604134&to=1462691204134&var-node=All"
-                        width="450" height="200" frameborder="0"></iframe>
-                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=1&from=1462687575627&to=1462691175627&var-node=All"
-                        width="450" height="200" frameborder="0"></iframe>
-            </div>
+        <div data-ng-show="resourceMonitor" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <iframe src="sub/resourceMonitor.html" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
         </div>
     </div>
 </div>
@@ -103,6 +90,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="../assets/js/jslib/angular.js"></script>
+<script src="../assets/js/local/controlPlane.js"></script>
 </body>
 </html>
