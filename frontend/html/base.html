@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>容器云PaaS管理平台</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/local/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">容器云PaaS管理平台</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">控制面板</a></li>
+                <li><a href="#">设置</a></li>
+                <li><a href="#">简介</a></li>
+                <li><a href="#">帮助</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="搜索...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Export</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">Nav item</a></li>
+                <li><a href="">Nav item again</a></li>
+                <li><a href="">One more nav</a></li>
+                <li><a href="">Another nav item</a></li>
+                <li><a href="">More navigation</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">PaaS平台资源监控</a></li>
+                <li><a href="">其他一</a></li>
+                <li><a href="">其他二</a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">资源监控</h1>
+            <h3 class="sub-header">集群情况</h3>
+            <div class="row placeholders">
+                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=5&from=1462629012803&to=1462632612803&var-node=All"
+                        width="450" height="200" frameborder="0"></iframe>
+                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=7&from=1462629726228&to=1462633326228&var-node=All"
+                        width="450" height="200" frameborder="0"></iframe>
+            </div>
+
+            <h3 class="sub-header">节点1：localhost</h3>
+            <div class="row placeholders">
+                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=6&from=1462687588747&to=1462691188747&var-node=All"
+                        width="450" height="200" frameborder="0"></iframe>
+                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=9&from=1462687604134&to=1462691204134&var-node=All"
+                        width="450" height="200" frameborder="0"></iframe>
+                <iframe src="http://172.16.1.73:3000/dashboard-solo/db/kubernetes-cluster?panelId=1&from=1462687575627&to=1462691175627&var-node=All"
+                        width="450" height="200" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</body>
+</html>
