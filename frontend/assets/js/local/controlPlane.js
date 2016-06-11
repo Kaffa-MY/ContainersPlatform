@@ -5,10 +5,38 @@ app.controller("planeCtrl", function($scope) {
             case 1:
                 $scope.registryUI = true;
                 $scope.resourceMonitor = false;
+                $scope.ambari = false;
+                $scope.ambariAuto = false;
+                $scope.ambariManual = false;
                 break;
             case 2:
                 $scope.registryUI = false;
                 $scope.resourceMonitor = true;
+                $scope.ambari = false;
+                $scope.ambariAuto = false;
+                $scope.ambariManual = false;
+                break;
+            case 3:
+                $scope.registryUI = false;
+                $scope.resourceMonitor = false;
+                $scope.ambari = true;
+                $scope.ambariAuto = false;
+                $scope.ambariManual = false;
+                break
+            case 4:
+                $scope.registryUI = false;
+                $scope.resourceMonitor = false;
+                $scope.ambari = false;
+                $scope.ambariAuto = true;
+                $scope.ambariManual = false;
+                break
+            case 5:
+                $scope.registryUI = false;
+                $scope.resourceMonitor = false;
+                $scope.ambari = false;
+                $scope.ambariAuto = false;
+                $scope.ambariManual = true;
+                break
             default:
                 break;
         }

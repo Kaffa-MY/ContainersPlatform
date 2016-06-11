@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>容器云PaaS管理平台</title>
+    <title>容器云PaaS服务资源管理平台</title>
 
     <!-- Bootstrap core CSS -->
     <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -61,26 +61,67 @@
                 <li><a href="#">Analytics</a></li>
                 <li><a href="#">Export</a></li>
             </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="">Nav item</a></li>
-                <li><a href="">Nav item again</a></li>
-                <li><a href="">One more nav</a></li>
-                <li><a href="">Another nav item</a></li>
-                <li><a href="">More navigation</a></li>
-            </ul>
+
             <ul class="nav nav-sidebar">
                 <li><a data-ng-click="showModule(2)">PaaS平台资源监控</a></li>
                 <li><a href="">其他一</a></li>
                 <li><a href="">其他二</a></li>
             </ul>
+
+            <p>Ambari资源管理服务</p>
+            <ul class="nav nav-sidebar">
+                <li><a data-ng-click="showModule(3)">服务运行状态监控</a></li>
+                <li><a data-ng-click="showModule(4)">服务能力自动扩展</a></li>
+                <li><a data-ng-click="showModule(5)">服务能力手动扩展</a></li>
+            </ul>
+
+            <p>协调服务</p>
+            <ul class="nav nav-sidebar">
+                <li><a href="">服务运行状态监控</a></li>
+                <li><a href="">服务能力自动扩展</a></li>
+                <li><a href="">服务能力手动扩展</a></li>
+            </ul>
+
+            <p>缓存服务</p>
+            <ul class="nav nav-sidebar">
+                <li><a href="">服务运行状态监控</a></li>
+                <li><a href="">服务能力自动扩展</a></li>
+                <li><a href="">服务能力手动扩展</a></li>
+            </ul>
+
+            <p>消息队列服务</p>
+            <ul class="nav nav-sidebar">
+                <li><a href="">服务运行状态监控</a></li>
+                <li><a href="">服务能力自动扩展</a></li>
+                <li><a href="">服务能力手动扩展</a></li>
+            </ul>
+
+            <p>存储服务</p>
+            <ul class="nav nav-sidebar">
+                <li><a href="">服务运行状态监控</a></li>
+                <li><a href="">服务能力自动扩展</a></li>
+                <li><a href="">服务能力手动扩展</a></li>
+            </ul>
         </div>
 
         <div data-ng-show="registryUI" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <iframe src="http://192.168.166.150:8181/repositories" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
+            <iframe src="http://localhost:8181/repositories" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
         </div>
 
         <div data-ng-show="resourceMonitor" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <iframe src="sub/resourceMonitor.html" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
+        </div>
+
+        <div data-ng-show="ambari" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <iframe src="http://www.baidu.com" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
+        </div>
+
+        <div data-ng-show="ambariAuto" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <iframe src="sub/ambari/auto.html" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
+        </div>
+
+        <div data-ng-show="ambariManual" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <iframe src="sub/ambari/manual.html" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
         </div>
     </div>
 </div>
