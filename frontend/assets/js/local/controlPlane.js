@@ -8,6 +8,7 @@ app.controller("planeCtrl", function($scope) {
                 $scope.ambari = false;
                 $scope.ambariAuto = false;
                 $scope.ambariManual = false;
+                $scope.serviceStatus = false;
                 break;
             case 2:
                 $scope.registryUI = false;
@@ -15,6 +16,7 @@ app.controller("planeCtrl", function($scope) {
                 $scope.ambari = false;
                 $scope.ambariAuto = false;
                 $scope.ambariManual = false;
+                $scope.serviceStatus = false;
                 break;
             case 3:
                 $scope.registryUI = false;
@@ -22,21 +24,32 @@ app.controller("planeCtrl", function($scope) {
                 $scope.ambari = true;
                 $scope.ambariAuto = false;
                 $scope.ambariManual = false;
-                break
+                $scope.serviceStatus = false;
+                break;
             case 4:
                 $scope.registryUI = false;
                 $scope.resourceMonitor = false;
                 $scope.ambari = false;
                 $scope.ambariAuto = true;
                 $scope.ambariManual = false;
-                break
+                $scope.serviceStatus = false;
+                break;
             case 5:
                 $scope.registryUI = false;
                 $scope.resourceMonitor = false;
                 $scope.ambari = false;
                 $scope.ambariAuto = false;
                 $scope.ambariManual = true;
-                break
+                $scope.serviceStatus = false;
+                break;
+            case 6:
+                $scope.registryUI = false;
+                $scope.resourceMonitor = false;
+                $scope.ambari = false;
+                $scope.ambariAuto = false;
+                $scope.ambariManual = false;
+                $scope.serviceStatus = true;
+                break;
             default:
                 break;
         }

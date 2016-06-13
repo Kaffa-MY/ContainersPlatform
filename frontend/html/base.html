@@ -57,15 +57,17 @@
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a data-ng-click='showModule(1)'>镜像中心</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Export</a></li>
+                <li><a data-ng-click="showModule(1)">镜像中心</a></li>
             </ul>
 
+            <p>服务管理中心</p>
+            <ul class="nav nav-sidebar">
+                <li><a data-ng-click="showModule(6)">服务状态管理</a></li>
+            </ul>
+
+            <p>PaaS资源管理</p>
             <ul class="nav nav-sidebar">
                 <li><a data-ng-click="showModule(2)">PaaS平台资源监控</a></li>
-                <li><a href="">其他一</a></li>
-                <li><a href="">其他二</a></li>
             </ul>
 
             <p>Ambari资源管理服务</p>
@@ -105,7 +107,7 @@
         </div>
 
         <div data-ng-show="registryUI" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <iframe src="http://localhost:8181/repositories" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
+            <iframe src="http://192.168.1.133:8282/repository/index" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
         </div>
 
         <div data-ng-show="resourceMonitor" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -113,7 +115,7 @@
         </div>
 
         <div data-ng-show="ambari" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <iframe src="http://www.baidu.com" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
+            <iframe src="http://192.168.1.125:81" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
         </div>
 
         <div data-ng-show="ambariAuto" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -122,6 +124,10 @@
 
         <div data-ng-show="ambariManual" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <iframe src="sub/ambari/manual.html" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
+        </div>
+
+        <div data-ng-show="serviceStatus" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <iframe src="sub/serviceStatus.html" frameborder="0" width="100%" height="800" scrolling="no"></iframe>
         </div>
     </div>
 </div>
