@@ -2,8 +2,9 @@
 Just for ...
 
 #Frontend
-Bootstrap
-AngularJS
+- Bootstrap
+- AngularJS
 
 #Backend
-Django
+- Python2.7
+- Django
